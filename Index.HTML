@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gamers Lounge</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0a0a2e 0%, #1a1a4e 50%, #00004D 100%);
+            color: white; /* Makes text more readable on dark background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 40px, white, transparent),
+                radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 230px 80px, white, transparent),
+                radial-gradient(2px 2px at 300px 150px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1px 1px at 370px 50px, white, transparent),
+                radial-gradient(2px 2px at 450px 180px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 520px 90px, white, transparent),
+                radial-gradient(2px 2px at 600px 200px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 680px 60px, white, transparent),
+                radial-gradient(2px 2px at 750px 130px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1px 1px at 820px 170px, white, transparent),
+                radial-gradient(2px 2px at 900px 100px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 970px 40px, white, transparent),
+                radial-gradient(2px 2px at 1050px 190px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 1120px 70px, white, transparent),
+                radial-gradient(2px 2px at 1200px 140px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1px 1px at 1270px 200px, white, transparent);
+            background-size: 1300px 250px;
+            background-repeat: repeat;
+            animation: twinkle 5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .planet {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .planet-1 {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            right: 10%;
+            background: radial-gradient(circle at 30% 30%, #ff6b6b, #c0392b, #8b0000);
+            box-shadow: inset -20px -20px 40px rgba(0,0,0,0.5), 0 0 30px rgba(255,107,107,0.3);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .planet-2 {
+            width: 80px;
+            height: 80px;
+            top: 60%;
+            left: 8%;
+            background: radial-gradient(circle at 30% 30%, #3498db, #2980b9, #1a5276);
+            box-shadow: inset -15px -15px 30px rgba(0,0,0,0.5), 0 0 20px rgba(52,152,219,0.3);
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        .planet-3 {
+            width: 60px;
+            height: 60px;
+            top: 25%;
+            left: 20%;
+            background: radial-gradient(circle at 30% 30%, #f39c12, #d68910, #9a7d0a);
+            box-shadow: inset -10px -10px 25px rgba(0,0,0,0.5), 0 0 15px rgba(243,156,18,0.3);
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .planet-4 {
+            width: 100px;
+            height: 100px;
+            bottom: 15%;
+            right: 25%;
+            background: radial-gradient(circle at 30% 30%, #9b59b6, #8e44ad, #6c3483);
+            box-shadow: inset -18px -18px 35px rgba(0,0,0,0.5), 0 0 25px rgba(155,89,182,0.3);
+            animation: float 9s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .game-link {
+            display: inline-block;
+            background-color: #FFD700; /* Gold background for the game links */
+            color: #00004D; /* Dark blue text */
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px; /* Rounded corners */
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a 3D effect */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+        }
+        .game-link:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Gamers Lounge</h1>
+    <h2>Please select a game to play:</h2>
+    <div>
+    
+            <a href="1/game 1.html" class="game-link">Play 'Guess the Number'</a>
+            <a href="2/game 2.html" class="game-link">Play 'Motor XD'</a>
+        <a href="3/game 3.html" class="game-link">Play 'Speed Typer'</a>
+        <a href="4/game 4.html" class="game-link">Play 'Wheelie Master'</a>
+        <a href="5/game 5.html" class="game-link">Play 'Space Invaders'</a>
+        <a href="6/snake.html" class="game-link">Play 'Snake'</a>
+    </div>
+    
+    <div class="planet planet-1"></div>
+    <div class="planet planet-2"></div>
+    <div class="planet planet-3"></div>
+    <div class="planet planet-4"></div>
+</body>
+</html>
